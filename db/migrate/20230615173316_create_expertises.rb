@@ -5,6 +5,7 @@ class CreateExpertises < ActiveRecord::Migration[7.0]
       t.text :description
       t.binary :icon
       t.references :mentor, null: false, foreign_key: { to_table: :mentors }, index: true
+
       t.timestamps
     end
   end
