@@ -5,6 +5,7 @@ class CreateMentors < ActiveRecord::Migration[7.0]
       t.text :bio
       t.binary :photo
       t.string :contact
+
       t.timestamps
     end
   end
