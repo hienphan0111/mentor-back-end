@@ -83,6 +83,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    doorkeeper (5.6.6)
+      railties (>= 5)
     dotenv (2.8.1)
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
@@ -209,6 +211,7 @@ DEPENDENCIES
   bootsnap
   debug
   devise
+  doorkeeper
   dotenv-rails
   pg (~> 1.1)
   puma (~> 5.0)

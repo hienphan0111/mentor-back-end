@@ -4,5 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :name, presence: true
+
+  validates :email, format: URI::MailTo::EMAIL_REGEXP
+
+  def self.authenticate(email, password)
+    user = User.find_for_authentication(email: email)
+    user&.valid_password?(password) ? user : nil
+  end
+
   has_many :reservations, dependent: :destroy
 end
