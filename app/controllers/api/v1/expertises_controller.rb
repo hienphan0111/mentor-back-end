@@ -20,7 +20,6 @@ module Api
       def expertise_params
         params.require(:expertise).permit(:name, :description, :icon)
       end
-
     end
   end
 end

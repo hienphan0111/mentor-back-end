@@ -7,7 +7,10 @@ module Api
       end
 
       def create
-        reservation = Reservation.new(time: Time.parse(reservation_params[:time]), message: reservation_params[:message])
+        reservation = Reservation.new(
+          time: Time.parse(reservation_params[:time]),
+          message: reservation_params[:message]
+        )
         reservation.user = current_user
         reservation.mentor = Mentor.find(reservation_params[:mentor_id].to_i)
         if reservation.save
@@ -22,7 +25,6 @@ module Api
       def reservation_params
         params.require(:reservation).permit(:time, :message, :mentor_id)
       end
-
     end
   end
 end
