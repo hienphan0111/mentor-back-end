@@ -16,6 +16,7 @@ gem 'puma', '~> 5.0'
 # gem "jbuilder"
 
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'rubocop-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
