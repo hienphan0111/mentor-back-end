@@ -4,10 +4,12 @@ Rails.application.routes.draw do
   use_doorkeeper do
     skip_controllers :authorization, :applications, :authorized_applications
   end
-  devise_for :users
+  devise_for :users, only: []
   namespace :api do
     namespace :v1 do
-      resource :users, only: %i[create]
+      resource :users, only: [:create, :show] do
+        post '/login', to: 'users#login'
+      end
       get 'reservations/index'
       # get '/expertises', to: 'expertises#expertises'
       resource :mentors, only: [:create, :destroy] do
