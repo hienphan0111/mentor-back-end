@@ -1,9 +1,9 @@
 module Api
   module V1
     class ReservationsController < Api::V1::ApplicationController
-      def expertises
-        @revervations = Reservations.all.where(user == current_user)
-        render json: @expertises
+      def reservations
+        rvs = Reservation.all.where(user_id: current_user.id)
+        render json: { status: 'ok', data: rvs }
       end
 
       def create
