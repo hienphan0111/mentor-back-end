@@ -66,6 +66,8 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    addressable (2.8.4)
+      public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     bcrypt (3.1.18)
     bootsnap (1.16.0)
@@ -83,6 +85,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    diff-lcs (1.5.0)
     doorkeeper (5.6.6)
       railties (>= 5)
     dotenv (2.8.1)
@@ -98,6 +101,8 @@ GEM
     irb (1.7.0)
       reline (>= 0.3.0)
     json (2.6.3)
+    json-schema (3.0.0)
+      addressable (>= 2.8)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -132,6 +137,7 @@ GEM
       racc
     pg (1.5.3)
     pg (1.5.3-x64-mingw-ucrt)
+    public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.7.1)
@@ -176,6 +182,33 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.2.5)
+    rspec-core (3.12.2)
+      rspec-support (~> 3.12.0)
+    rspec-expectations (3.12.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-mocks (3.12.5)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-rails (6.0.3)
+      actionpack (>= 6.1)
+      activesupport (>= 6.1)
+      railties (>= 6.1)
+      rspec-core (~> 3.12)
+      rspec-expectations (~> 3.12)
+      rspec-mocks (~> 3.12)
+      rspec-support (~> 3.12)
+    rspec-support (3.12.0)
+    rswag-api (2.9.0)
+      railties (>= 3.1, < 7.1)
+    rswag-specs (2.9.0)
+      activesupport (>= 3.1, < 7.1)
+      json-schema (>= 2.2, < 4.0)
+      railties (>= 3.1, < 7.1)
+      rspec-core (>= 2.14)
+    rswag-ui (2.9.0)
+      actionpack (>= 3.1, < 7.1)
+      railties (>= 3.1, < 7.1)
     rubocop (1.52.1)
       json (~> 2.3)
       parallel (~> 1.10)
@@ -221,6 +254,10 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.5)
+  rspec-rails
+  rswag-api
+  rswag-specs
+  rswag-ui
   rubocop (>= 1.0, < 2.0)
   rubocop-rails
   tzinfo-data
