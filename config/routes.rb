@@ -21,7 +21,7 @@ Rails.application.routes.draw do
         get '/', to: 'expertises#expertises'
       end
 
-      resource :reservation, only: [:index, :create, :update, :destroy] do
+      resource :reservations, only: [:index, :create, :update, :destroy] do
         get '/', to: 'reservations#reservations'
       end
     end
