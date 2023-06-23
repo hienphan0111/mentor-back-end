@@ -22,11 +22,6 @@ module Api
         end
       end
 
-      def show
-        user = current_user
-        render json: { user }
-      end
-
       private
 
       def create_token(user, client_app)
