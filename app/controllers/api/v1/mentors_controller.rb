@@ -1,7 +1,6 @@
 module Api
   module V1
     class MentorsController < Api::V1::ApplicationController
-
       def mentors
         mentors = Mentor.includes(:expertises).all
         data = []
