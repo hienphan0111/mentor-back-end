@@ -29,7 +29,7 @@ module Api
               id: current_user.id,
               name: current_user.name,
               email: current_user.email,
-              isAdmin: current_user.isAdmin,
+              isAdmin: current_user.isAdmin
             }
           }
         )

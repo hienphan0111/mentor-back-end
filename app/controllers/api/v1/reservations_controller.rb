@@ -13,8 +13,9 @@ module Api
           }
         end
         render json: {
-                  status: 'ok',
-                  data: data }
+          status: 'ok',
+          data:
+        }
       end
 
       def create
