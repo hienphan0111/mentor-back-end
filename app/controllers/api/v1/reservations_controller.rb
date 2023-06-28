@@ -5,11 +5,13 @@ module Api
         rvs = Reservation.includes(:mentor).all.where(user_id: current_user.id)
         data = []
         rvs&.each do |reser|
-          data << { mentor: reser.mentor, expertises: reser.mentor.expertises, time: reser.time, message: reser.message }
+          data << { mentor: reser.mentor, expertises: reser.mentor.expertises, time: reser.time,
+                    message: reser.message }
         end
         render json: {
-                  status: 'ok',
-                  data: data }
+          status: 'ok',
+          data:
+        }
       end
 
       def create
