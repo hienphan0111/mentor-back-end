@@ -141,6 +141,12 @@ rspec spec rspec
 - Twitter: [hienphan0111](https://twitter.com/hienphan0111)
 - LinkedIn: [mr-hienphan](https://www.linkedin.com/in/hien-phan-61097b256/)
 
+👤 **Christian Hakizimana**
+
+- GitHub: [@githubhandle](https://github.com/hakichris)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/hakichris)
+
 
 <!-- FUTURE FEATURES -->
 
