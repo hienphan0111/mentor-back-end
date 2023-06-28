@@ -85,6 +85,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: mentor_back_end_production
   username: mentor_back_end
   password: <%= ENV["MENTOR_BACK_END_DATABASE_PASSWORD"] %>
