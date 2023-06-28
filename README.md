@@ -147,6 +147,11 @@ rspec spec rspec
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/hakichris)
 
+👤 **Donald Akite**
+
+- GitHub: [@githubhandle](https://github.com/quavo19)
+- Twitter: [@twitterhandle](https://twitter.com/DonaldAkite)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/donald-akite-299a31222/)
 
 <!-- FUTURE FEATURES -->
 
