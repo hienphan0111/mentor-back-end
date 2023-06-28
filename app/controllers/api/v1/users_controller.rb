@@ -22,6 +22,19 @@ module Api
         end
       end
 
+      def user
+        render(
+          json: {
+            user: {
+              id: current_user.id,
+              name: current_user.name,
+              email: current_user.email,
+              isAdmin: current_user.isAdmin
+            }
+          }
+        )
+      end
+
       private
 
       def create_token(user, client_app)
@@ -37,7 +50,9 @@ module Api
           json: {
             user: {
               id: user.id,
+              name: user.name,
               email: user.email,
+              isAdmin: user.isAdmin,
               access_token: access_token.token,
               token_type: 'bearer',
               expires_in: access_token.expires_in,

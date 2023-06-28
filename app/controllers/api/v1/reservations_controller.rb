@@ -2,8 +2,16 @@ module Api
   module V1
     class ReservationsController < Api::V1::ApplicationController
       def reservations
-        rvs = Reservation.all.where(user_id: current_user.id)
-        render json: { status: 'ok', data: rvs }
+        rvs = Reservation.includes(:mentor).all.where(user_id: current_user.id)
+        data = []
+        rvs&.each do |reser|
+          data << { mentor: reser.mentor, expertises: reser.mentor.expertises, time: reser.time,
+                    message: reser.message }
+        end
+        render json: {
+          status: 'ok',
+          data:
+        }
       end
 
       def create
