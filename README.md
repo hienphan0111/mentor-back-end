@@ -145,7 +145,7 @@ rspec spec rspec
 
 - GitHub: [@githubhandle](https://github.com/hakichris)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [@LinkedInhandle](https://linkedin.com/in/hakichris)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/hakichris)
 
 
 <!-- FUTURE FEATURES -->
