@@ -26,6 +26,7 @@ Rails.application.routes.draw do
 
       resource :reservations, only: [:index, :create, :update, :destroy] do
         get '/', to: 'reservations#reservations'
+        delete '/:id', to: 'reservations#destroy'
       end
     end
   end
