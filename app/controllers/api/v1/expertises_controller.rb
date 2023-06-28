@@ -9,10 +9,17 @@ module Api
       def create
         expertise = Expertise.new(expertise_params)
         if expertise.save
-          render json: { status: 'ok', data: expertise }
+          expertises = Expertise.all
+          render json: expertises
         else
           render json: { error: 'can not create expertise' }
         end
+      end
+
+      def destroy
+        Expertise.destroy(params[:id])
+        expertise = Expertise.all
+        render json: expertise
       end
 
       private
