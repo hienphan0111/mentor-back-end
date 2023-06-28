@@ -5,8 +5,12 @@ module Api
         rvs = Reservation.includes(:mentor).all.where(user_id: current_user.id)
         data = []
         rvs&.each do |reser|
-          data << { mentor: reser.mentor, expertises: reser.mentor.expertises, time: reser.time,
-                    message: reser.message }
+          data << {
+            id: reser.id,
+            mentor: reser.mentor,
+            expertises: reser.mentor.expertises,
+            time: reser.time, message: reser.message
+          }
         end
         render json: {
           status: 'ok',
@@ -16,16 +20,21 @@ module Api
 
       def create
         reservation = Reservation.new(
-          time: Time.parse(reservation_params[:time]),
+          time: reservation_params[:time],
           message: reservation_params[:message]
         )
         reservation.user = current_user
         reservation.mentor = Mentor.find(reservation_params[:mentor_id].to_i)
         if reservation.save
-          render json: { status: 'ok', data: reservation }
+          reservations
         else
           render json: { error: 'can not create reservation' }
         end
+      end
+
+      def destroy
+        Reservation.destroy(params[:id].to_i)
+        reservations
       end
 
       private
