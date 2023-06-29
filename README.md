@@ -126,7 +126,7 @@ rspec spec rspec/your_spec.rb
 To run all Rspec test files in a directory
 
 ```shell
-rspec spec rspec
+rake rswag
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
