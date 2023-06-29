@@ -24,6 +24,8 @@ default: &default
 development:
   <<: *default
   database: mentor_back_end_development
+  username: <%= ENV["MENTOR_APP_DATABASE_USERNAME"] %>
+  password: <%= ENV["MENTOR_APP_DATABASE_PASSWORD"] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +60,8 @@ development:
 test:
   <<: *default
   database: mentor_back_end_test
+  username: <%= ENV["MENTOR_APP_DATABASE_USERNAME"] %>
+  password: <%= ENV["MENTOR_APP_DATABASE_PASSWORD"] %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +85,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: mentor_back_end_production
   username: mentor_back_end
   password: <%= ENV["MENTOR_BACK_END_DATABASE_PASSWORD"] %>
